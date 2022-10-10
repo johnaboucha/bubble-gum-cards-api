@@ -12,11 +12,19 @@ def api_key_auth(api_key: str = Depends(oauth2_scheme)):
             detail="Forbidden"
         )
 
-router = APIRouter(prefix="/cards")
+router = APIRouter(prefix="/api/cards")
 
 @router.get("/")
-def read_root():
-	return cards[:9]
+def read_root(skip: int = 0, limit: int = 10, search: str = None):
+	if search != None:
+		results = []
+		for card in cards:
+			card_contents = card["player"] + " " + card["manufacturer"] + "  " + card["description"]
+			if search.lower() in card_contents.lower():
+				results.append(card)
+		return results[skip:skip+limit]
+
+	return cards[skip:skip+limit]
 
 @router.get("/{id}")
 def read_card(id: int):

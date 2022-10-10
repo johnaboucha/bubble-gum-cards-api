@@ -1,20 +1,20 @@
 from fastapi import APIRouter
-from data.data import players
+from data.data import teams
 
-router = APIRouter(prefix="/api/players")
+router = APIRouter(prefix="/api/teams")
 
 @router.get("/")
 def read_root(skip: int = 0, limit: int = 10):
-	return players[skip:skip+limit]
+	return teams[skip:skip+limit]
 
 @router.put("/{id")
-def update_card(id: int):
+def update_team(id: int):
 	pass
 
 @router.post("/")
-def create_card():
+def create_team():
 	pass
 
 @router.delete("/?id={id}")
-def delete_card(id: int):
+def delete_team(id: int):
 	pass
