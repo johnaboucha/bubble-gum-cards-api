@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from data.cards import cards
+from routers import cards, manufacturers, players
 
 app = FastAPI()
 
-@app.get("/")
-def root():
-	return {"message":cards[:9]}
+app.include_router(cards.router)
+app.include_router(players.router)
+app.include_router(manufacturers.router)

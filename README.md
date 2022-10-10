@@ -1,2 +1,2 @@
-# bubble-gum-cards-api
+# Bubble Gum Cards API
  
