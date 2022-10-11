@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from routers import cards, manufacturers, players, teams
+from routers import cards, manufacturers, players, teams, categories
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.responses import HTMLResponse
@@ -31,3 +31,4 @@ app.include_router(cards.router)
 app.include_router(players.router)
 app.include_router(manufacturers.router)
 app.include_router(teams.router)
+app.include_router(categories.router)

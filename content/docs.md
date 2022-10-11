@@ -259,3 +259,34 @@ Searchable fields:
 
 - ```location```
 - ```name```
+
+<h3 id="categories">Categories</h3>
+
+The Category resource returns all the categories found within the collection.
+
+Endpoints
+
+- ```/categories/``` gets all the categories resources
+
+Example request:
+
+	http://localhost:8000/api/categories/
+
+Example response:
+
+	HTTP/1.0 200 OK
+	Content-Type: application/json
+	{
+		"categories": [
+			"Alliteration",
+			"Bubble Gum",
+			"Camera",
+			"Celebrity",
+			"Crotch Bat",
+			"Fly Ball",
+			"Flying Helmet",
+			"Priceless",
+			"Tagged Out",
+			"Telephone"
+		]
+	}

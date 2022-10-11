@@ -10,7 +10,8 @@ cards = []
 manufacturers = []
 players = []
 teams = []
-
+categories_all = []
+categories = []
 
 #
 #  CARDS
@@ -36,6 +37,10 @@ with open(card_file, 'r') as csvfile:
 			"parallel": row[7],
 			"image": row[8]
 		})
+		categories_all.append(row[6])
+categories = list(set(categories_all))
+categories.sort()
+
 
 #
 #  MANUFACTURERS
