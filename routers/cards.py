@@ -1,16 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from data.data import cards
-from fastapi.security import OAuth2PasswordBearer
-from security.keys import keys
+from security.keys import api_key_auth, keys
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-def api_key_auth(api_key: str = Depends(oauth2_scheme)):
-    if api_key not in keys:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Forbidden"
-        )
 
 router = APIRouter(prefix="/api/cards")
 
@@ -19,7 +11,7 @@ def read_root(skip: int = 0, limit: int = 10, search: str = None):
 	if search != None:
 		results = []
 		for card in cards:
-			card_contents = card["player"] + " " + card["manufacturer"] + "  " + card["description"]
+			card_contents = card["player"] + card["description"]
 			if search.lower() in card_contents.lower():
 				results.append(card)
 		return results[skip:skip+limit]

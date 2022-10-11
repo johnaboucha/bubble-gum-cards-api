@@ -55,7 +55,11 @@ with open(manufacturer_file, 'r') as csvfile:
 			"year_founded": row[1],
 			"year_defuct": row[2],
 			"fate": row[3],
-			"headquarters": row[4]
+			"headquarters": row[4],
+			"website": row[5],
+			"revenue": row[6],
+			"employees": row[7],
+			"address": row[8]
 		})
 
 #

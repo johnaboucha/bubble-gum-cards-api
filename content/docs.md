@@ -1,6 +1,6 @@
 # Documentation
 
-## Overview
+<h2 id="overview">Overview</h2>
 
 The Bubble Gum Cards is a JSON-based API that provides access to a curated set of trading cards, mostly baseball, that have been categorized by the contents of their photograph.
 
@@ -8,7 +8,7 @@ All requests are made to endpoints appended to the root URL: ```/api/```
 
 An example frontend using the API can be found at: ```https://example.com```
 
-## Getting started
+<h2 id="getting-started">Getting started</h2>
 
 Making a request to the Bubble Gum Cards API is easy.
 
@@ -20,38 +20,40 @@ Open up a Terminal, Postman, or another tool to make a request for a resource. I
 
 Here is the response.
 
+	HTTP/1.0 200 OK
+	Content-Type: application/json
 	{
-	"id": 1,
-	"year": 1989,
-	"manufacturer": "Fleer",
-	"player": "Billy Ripken",
-	"series": "",
-	"number": "616",
-	"description": "Player is holding a bat with the words Fuck Face written on the end of the handle.",
-	"category": "Nutty",
-	"parallel": "",
-	"image": "1989-fleer-ripken.jpg"
+		"id": 1,
+		"year": 1989,
+		"manufacturer": "Fleer",
+		"player": "Billy Ripken",
+		"series": "",
+		"number": "616",
+		"description": "Player is holding a bat with the words Fuck Face written on the end of the handle.",
+		"category": "Nutty",
+		"parallel": "",
+		"image": "1989-fleer-ripken.jpg"
 	}
 
-### Base URL
+<h3 id="base">Base URL</h3>
 
 The Base URL is the root URL that all requests start with. The documentation assumes you are appending all endpoints to the Base URL to make requests.
 
 	https://example.com
 
-### Authentication
+<h3 id="authentication">Authentication</h3>
 
 Bubble Gum Cards API is a free and open API. No authentication is required to query data using GET requests. No other HTTP methods are available.
 
-### Search
+<h3 id="search">Search</h3>
 
 All resources support a search parameter that filters the results returned. Searches are not case sensitive and partial matches on field contents are returned. An example of a search query is shown below.
 
 	https://example.com/api/cards/?search=steve
 
-## Resources
+<h2 id="resources">Resources</h2>
 
-### Root
+<h3 id="root">Root</h3>
 
 The Root resource path returns available resources within the API.
 
@@ -70,13 +72,149 @@ Example response:
 		"teams": "/api/teams/"
 	}
 
-Attributes:
+Resources:
 
 - ```cards``` The root URL for Cards resources
 - ```manufacturers``` The root URL for Manufacturers resources
 - ```players``` The root URL for Players resources
 - ```teams``` The root URL for Teams resources
 
-### Cards
+<h3 id="cards">Cards</h3>
 
 A Card resource is an individual card within the collection.
+
+Endpoints
+
+- ```/cards/``` gets all the card resources
+- ```/cards/:id/``` gets specific card by its ID
+
+Example request:
+
+	http://localhost:8000/api/cards/2
+
+Example response:
+
+	HTTP/1.0 200 OK
+	Content-Type: application/json
+	{
+		"id": 2,
+		"year": 1989,
+		"manufacturer": "ProCards",
+		"player": "Kieth Comstock",
+		"series": "Minor League Team Sets",
+		"number": "14",
+		"description": "A baseball is impacting the player's crotch",
+		"category": "Priceless",
+		"parallel": "",
+		"image": "1989-procards-comstock.jpg"
+	}
+
+Attributes:
+
+- ```year``` the year the card was produced
+- ```manufacturer``` the company who manufactured the card
+- ```player``` the baseball player or athlete
+- ```series``` specified if card is a member of a non-regular set
+- ```number``` the card number
+- ```description``` a description of the card's photograph
+- ```category``` the category the card belongs to in the collection
+- ```parallel``` specified if card is a parallel version
+- ```image``` name of the image scan on the server
+
+Searchable fields:
+
+- ```player```
+- ```description```
+
+<h3 id="manufacturers">Manufacturers</h3>
+
+A Manufacturer resource is a single card manufacturer found within the collection.
+
+Endpoints
+
+- ```/manufacturers/``` gets all the manufacturer resources
+- ```/manufacturers/:id/``` gets specific manufacturer by its ID
+
+Example request:
+
+	http://localhost:8000/api/manufacturers/1
+
+Example response:
+
+	HTTP/1.0 200 OK
+	Content-Type: application/json
+	{
+		"id": 1,
+		"name": "Topps",
+		"year_founded": "1981",
+		"year_defuct": "",
+		"fate": "",
+		"headquarters": "New York, NY",
+		"website": "https://www.topps.com/",
+		"revenue": "$560 million",
+		"employees": "422",
+		"address": "1 Whitehall Street New York, NY 10004"
+	}
+
+Attributes:
+
+- ```name``` the name of the manufacturer
+- ```year_founded``` the year the manufacturer was established
+- ```year_defunct``` the year the manufacturer went out of business or sold
+- ```fate``` description of what happened after manufacturer went defunct
+- ```headquarters``` the location of the manufacturer's main office
+- ```website``` the manufacturer's website
+- ```revenue``` the manufacturer's actual or estimated revenue
+- ```employees``` the number of manufacturer's employees
+- ```address``` the stree address of the manufacturer
+
+Searchable fields
+
+- ```name```
+
+<h3 id="players">Players</h3>
+
+A Player resource is a single player found within the collection.
+
+Endpoints
+
+- ```/players/``` gets all the player resources
+- ```/players/:id/``` gets specific player by their ID
+
+Example request:
+
+	http://localhost:8000/api/player/3
+
+Example response:
+
+	HTTP/1.0 200 OK
+	Content-Type: application/json
+	{
+		"id": 3,
+		"first_name": "Barry",
+		"last_name": "Bonds",
+		"position": "Left Field",
+		"birth_date": "1964-07-24",
+		"death_date": "",
+		"throws": "left",
+		"bats": "left",
+		"height": "6' 1\"",
+		"weight": "185"
+	}
+
+Attributes:
+
+- ```first_name``` the player's first name
+- ```last_name``` the player's last name
+- ```position``` the player's position
+- ```birth_date``` the player's birth date
+- ```death_date``` the date of the player's death (Optional)
+- ```throws``` the hand the player throws with
+- ```bats``` the side the player bats from
+- ```height``` the player's height
+- ```weight``` the player's weight
+
+Searchable fields:
+
+- ```first_name```
+- ```last_name```
