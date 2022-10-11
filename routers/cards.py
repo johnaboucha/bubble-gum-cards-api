@@ -7,12 +7,25 @@ from security.keys import api_key_auth, keys
 router = APIRouter(prefix="/api/cards")
 
 @router.get("/")
-def read_root(skip: int = 0, limit: int = 10, search: str = None):
-	if search != None:
+def read_root(skip: int = 0, limit: int = 10, search: str = None, category: str = None):
+	if search != None and category == None:
 		results = []
 		for card in cards:
 			card_contents = card["player"] + card["description"]
 			if search.lower() in card_contents.lower():
+				results.append(card)
+		return results[skip:skip+limit]
+	elif search != None and category != None:
+		results = []
+		for card in cards:
+			card_contents = card["player"] + card["description"]
+			if search.lower() in card_contents.lower() and category.lower() == card["category"].lower():
+				results.append(card)
+		return results[skip:skip+limit]
+	elif category != None:
+		results = []
+		for card in cards:
+			if category.lower() == card["category"].lower():
 				results.append(card)
 		return results[skip:skip+limit]
 

@@ -24,7 +24,8 @@ def root():
 		"cards": "/api/cards/",
 		"manufacturers": "/api/manufacturers/",
 		"players": "/api/players/",
-		"teams": "/api/teams/"
+		"teams": "/api/teams/",
+		"categories": "/api/categories/"
 	}
 
 app.include_router(cards.router)

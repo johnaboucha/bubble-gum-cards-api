@@ -12,7 +12,7 @@ An example frontend using the API can be found at: ```https://example.com```
 
 Making a request to the Bubble Gum Cards API is easy.
 
-Open up a Terminal, Postman, or another tool to make a request for a resource. In the example below, a request is made to the baseball card with the ID 1.
+Open up a Terminal, Postman, or another tool to make a request for a resource. In the example below, a request is made to the baseball card with an ID equal to 1.
 
 
 	http://localhost:8000/api/cards/1
@@ -69,7 +69,8 @@ Example response:
 		"cards": "/api/cards/",
 		"manufacturers": "/api/manufacturers/",
 		"players": "/api/players/",
-		"teams": "/api/teams/"
+		"teams": "/api/teams/",
+		"categories": "/api/categories/"
 	}
 
 Resources:
@@ -78,6 +79,7 @@ Resources:
 - ```manufacturers``` The root URL for Manufacturers resources
 - ```players``` The root URL for Players resources
 - ```teams``` The root URL for Teams resources
+- ```categories``` The root URL for Categories resources
 
 <h3 id="cards">Cards</h3>
 
@@ -125,6 +127,46 @@ Searchable fields:
 
 - ```player```
 - ```description```
+
+Query parameters:
+
+- ```category```
+
+Example query:
+
+	http://localhost:8000/api/cards/?category=telephone
+
+Example response:
+
+	HTTP/1.0 200 OK
+	Content-Type: application/json
+	[
+	{
+		"id": 28,
+		"year": 1994,
+		"manufacturer": "Upper Deck",
+		"player": "Cal Ripken Jr",
+		"series": "Collector's Choice",
+		"number": "240",
+		"description": "",
+		"category": "Telephone",
+		"parallel": "",
+		"image": ""
+	},
+	{
+		"id": 29,
+		"year": 1996,
+		"manufacturer": "Stadium Club",
+		"player": "Todd Zeile",
+		"series": "",
+		"number": "420",
+		"description": "",
+		"category": "Telephone",
+		"parallel": "",
+		"image": ""
+	},
+	...
+	]
 
 <h3 id="manufacturers">Manufacturers</h3>
 
