@@ -2,7 +2,7 @@
 
 <h2 id="overview">Overview</h2>
 
-The Bubble Gum Cards is a JSON-based API that provides access to a curated set of trading cards, mostly baseball, that have been categorized by the contents of their photograph.
+The Bubble Gum Cards is a JSON-based API that provides access to a curated set of baseball cards that have been categorized by the contents of their photograph.
 
 All requests are made to endpoints appended to the root URL: ```/api/```
 
@@ -43,7 +43,7 @@ The Base URL is the root URL that all requests start with. The documentation ass
 
 <h3 id="authentication">Authentication</h3>
 
-Bubble Gum Cards API is a free and open API. No authentication is required to query data using GET requests. No other HTTP methods are available.
+Bubble Gum Cards API is a free and open API. No authentication is required to query data using GET requests. Other HTTP methods are not available.
 
 <h3 id="search">Search</h3>
 
@@ -218,3 +218,44 @@ Searchable fields:
 
 - ```first_name```
 - ```last_name```
+
+<h3 id="teams">Teams</h3>
+
+A Team resource is a single team found within the collection.
+
+Endpoints
+
+- ```/teams/``` gets all the team resources
+- ```/teams/:id/``` gets specific team by its ID
+
+Example request:
+
+	http://localhost:8000/api/team/3
+
+Example response:
+
+	HTTP/1.0 200 OK
+	Content-Type: application/json
+	{
+		"id": 3,
+		"location": "Montreal",
+		"name": "Expos",
+		"league": "National League",
+		"league_level": "major",
+		"year_established": "1969",
+		"year_defunct": "2004"
+	}
+
+Attributes:
+
+- ```location``` the team's location
+- ```name``` the team's name
+- ```league``` the league that the team is a member of
+- ```league_level``` the league level the team participates in
+- ```year_established``` the year the team was formed
+- ```year_defunct``` the year the team was sold or disbanded
+
+Searchable fields:
+
+- ```location```
+- ```name```
