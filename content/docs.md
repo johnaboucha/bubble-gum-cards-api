@@ -51,6 +51,8 @@ All resources support a search parameter that filters the results returned. Sear
 
 ## Resources
 
+### Root
+
 The Root resource path returns available resources within the API.
 
 Example request:
@@ -67,3 +69,14 @@ Example response:
 		"players": "/api/players/",
 		"teams": "/api/teams/"
 	}
+
+Attributes:
+
+- ```cards``` The root URL for Cards resources
+- ```manufacturers``` The root URL for Manufacturers resources
+- ```players``` The root URL for Players resources
+- ```teams``` The root URL for Teams resources
+
+### Cards
+
+A Card resource is an individual card within the collection.
