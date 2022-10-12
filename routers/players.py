@@ -5,15 +5,15 @@ from data.data import players
 router = APIRouter(prefix="/api/players")
 
 @router.get("/")
-def read_root(skip: int = 0, limit: int = 10, search: str = None):
+def read_root(skip: int = 0, top: int = 9, search: str = None):
 	if search != None:
 		results = []
 		for player in players:
 			search_text = player["first_name"] + " " + player["last_name"]
 			if search.lower() in search_text.lower():
 				results.append(player)
-		return results[skip:skip+limit]
-	return players[skip:skip+limit]
+		return results[skip:skip+top]
+	return players[skip:skip+top]
 
 @router.get("/{id}")
 def read_player(id:int):

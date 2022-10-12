@@ -45,6 +45,14 @@ The Base URL is the root URL that all requests start with. The documentation ass
 
 Bubble Gum Cards API is a free and open API. No authentication is required to query data using GET requests. Other HTTP methods are not available.
 
+<h3 id="query-options">Query String Options</h3>
+
+The API includes ```skip``` and ```top``` options when querying a resource. Skip excludes the first _N_ items of a resource and top limits the response to _N_ items. The default value of ```skip``` is 0. The default value of ```top``` is 9.
+
+For example, to query five cards starting from the tenth card, use the following request.
+
+	http://localhost:8000/api/cards/?skip=9&top=5
+
 <h3 id="search">Search</h3>
 
 All resources support a search parameter that filters the results returned. Searches are not case sensitive and partial matches on field contents are returned. An example of a search query is shown below.

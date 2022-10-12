@@ -5,15 +5,15 @@ from security.keys import api_key_auth, keys
 router = APIRouter(prefix="/api/manufacturers")
 
 @router.get("/")
-def read_root(skip: int = 0, limit: int = 10, search: str = None):
+def read_root(skip: int = 0, top: int = 9, search: str = None):
 	if search != None:
 		results = []
 		for m in manufacturers:
 			if search.lower() in m["name"].lower():
 				results.append(m)
-		return results[skip:skip+limit]
+		return results[skip:skip+top]
 
-	return manufacturers[skip:skip+limit]
+	return manufacturers[skip:skip+top]
 
 @router.get("/{id}")
 def read_manufacturer(id: int):

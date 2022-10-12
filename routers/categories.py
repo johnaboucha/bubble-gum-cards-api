@@ -5,5 +5,5 @@ from data.data import categories
 router = APIRouter(prefix="/api/categories")
 
 @router.get("/")
-def read_root(skip: int = 0, limit: int = 10, search: str = None):
-	return {"categories": categories[skip:limit]}
+def read_root(skip: int = 0, top: int = 9, search: str = None):
+	return {"categories": categories[skip:skip+top]}

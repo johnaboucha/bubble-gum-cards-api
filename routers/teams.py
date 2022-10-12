@@ -4,15 +4,15 @@ from data.data import teams
 router = APIRouter(prefix="/api/teams")
 
 @router.get("/")
-def read_root(skip: int = 0, limit: int = 10, search: str = None):
+def read_root(skip: int = 0, top: int = 9, search: str = None):
 	if search != None:
 		results = []
 		for team in teams:
 			search_text = team["location"] + " " + team["name"]
 			if search.lower() in search_text.lower():
 				results.append(team)
-		return results[skip:skip+limit]
-	return teams[skip:skip+limit]
+		return results[skip:skip+top]
+	return teams[skip:skip+top]
 
 @router.get("/{id}")
 def read_team(id: int):
