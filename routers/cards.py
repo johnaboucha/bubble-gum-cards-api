@@ -2,8 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from data.data import cards
 from security.keys import api_key_auth, keys
 
-
-
 router = APIRouter(prefix="/api/cards")
 
 @router.get("/")
