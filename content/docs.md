@@ -2,20 +2,16 @@
 
 <h2 id="overview">Overview</h2>
 
-The Bubble Gum Cards is a JSON-based API that provides access to a curated set of baseball cards that have been categorized by the contents of their photograph.
-
-All requests are made to endpoints appended to the root URL: ```/api/```
-
-An example frontend using the API can be found at: ```https://example.com```
+The Bubble Gum Cards API provides access to a curated set of baseball cards. The collection is unique in that the individual cards have been categorized by the contents of their photograph. New cards are added periodically.
 
 <h2 id="getting-started">Getting started</h2>
 
-Making a request to the Bubble Gum Cards API is easy.
+Let's make your first request to the Bubble Gum Cards API.
 
-Open up a Terminal, Postman, or another tool to make a request for a resource. In the example below, a request is made to the baseball card with an ID equal to 1.
+Open up Terminal, Postman, or another tool to make a request for a resource. In the example below, a request is made to the baseball card with an ID equal to 1.
 
 
-	http://localhost:8000/api/cards/1
+	https://2wf0rg.deta.dev/api/cards/1
 
 
 Here is the response.
@@ -30,34 +26,36 @@ Here is the response.
 		"series": "",
 		"number": "616",
 		"description": "Player is holding a bat with the words Fuck Face written on the end of the handle.",
-		"category": "Nutty",
+		"category": "Priceless",
 		"parallel": "",
 		"image": "1989-fleer-ripken.jpg"
 	}
 
 <h3 id="base">Base URL</h3>
 
-The Base URL is the root URL that all requests start with. The documentation assumes you are appending all endpoints to the Base URL to make requests.
+The Base URL is the root URL that all requests will begin. The documentation assumes you are appending all endpoints to the Base URL to make requests.
 
-	https://example.com
+	https://2wf0rg.deta.dev/api/
 
 <h3 id="authentication">Authentication</h3>
 
-Bubble Gum Cards API is a free and open API. No authentication is required to query data using GET requests. Other HTTP methods are not available.
+The Bubble Gum Cards API is free and open. No authentication is required to query data using GET requests. Other HTTP method requests are not available.
 
 <h3 id="query-options">Query String Options</h3>
 
 The API includes ```skip``` and ```top``` options when querying a resource. Skip excludes the first _N_ items of a resource and top limits the response to _N_ items. The default value of ```skip``` is 0. The default value of ```top``` is 9.
 
-For example, to query five cards starting from the tenth card, use the following request.
+As an example, the following request will return 5 cards starting from the 10th card.
 
-	http://localhost:8000/api/cards/?skip=9&top=5
+	https://2wf0rg.deta.dev/api/cards/?skip=9&top=5
 
 <h3 id="search">Search</h3>
 
-All resources support a search parameter that filters the results returned. Searches are not case sensitive and partial matches on field contents are returned. An example of a search query is shown below.
+All resources support a search parameter that filters the results returned. Searches are not case sensitive and partial matches on field contents are returned.
 
-	https://example.com/api/cards/?search=steve
+An example of a search query is shown below.
+
+	https://2wf0rg.deta.dev/api/cards/?search=steve
 
 <h2 id="resources">Resources</h2>
 
@@ -67,7 +65,7 @@ The Root resource path returns available resources within the API.
 
 Example request:
 
-	https:/example.com/api/
+	https://2wf0rg.deta.dev/api/
 
 Example response:
 
@@ -100,7 +98,7 @@ Endpoints
 
 Example request:
 
-	http://localhost:8000/api/cards/2
+	https://2wf0rg.deta.dev/api/cards/2
 
 Example response:
 
@@ -129,7 +127,7 @@ Attributes:
 - ```description``` a description of the card's photograph
 - ```category``` the category the card belongs to in the collection
 - ```parallel``` specified if card is a parallel version
-- ```image``` name of the image scan on the server
+- ```image``` name of the reference image on the server
 
 Searchable fields:
 
@@ -140,9 +138,9 @@ Query parameters:
 
 - ```category```
 
-Example query:
+An example query using the category parameter is shown below:
 
-	http://localhost:8000/api/cards/?category=telephone
+	https://2wf0rg.deta.dev/api/cards/?category=telephone
 
 Example response:
 
@@ -187,7 +185,7 @@ Endpoints
 
 Example request:
 
-	http://localhost:8000/api/manufacturers/1
+	https://2wf0rg.deta.dev/api/manufacturers/1
 
 Example response:
 
@@ -196,7 +194,7 @@ Example response:
 	{
 		"id": 1,
 		"name": "Topps",
-		"year_founded": "1981",
+		"year_founded": "1938",
 		"year_defuct": "",
 		"fate": "",
 		"headquarters": "New York, NY",
@@ -210,13 +208,13 @@ Attributes:
 
 - ```name``` the name of the manufacturer
 - ```year_founded``` the year the manufacturer was established
-- ```year_defunct``` the year the manufacturer went out of business or sold
+- ```year_defunct``` the year the manufacturer went bankrupt or was sold
 - ```fate``` description of what happened after manufacturer went defunct
 - ```headquarters``` the location of the manufacturer's main office
 - ```website``` the manufacturer's website
 - ```revenue``` the manufacturer's actual or estimated revenue
 - ```employees``` the number of manufacturer's employees
-- ```address``` the stree address of the manufacturer
+- ```address``` the street address of the manufacturer
 
 Searchable fields
 
@@ -233,7 +231,7 @@ Endpoints
 
 Example request:
 
-	http://localhost:8000/api/player/3
+	https://2wf0rg.deta.dev/api/player/3
 
 Example response:
 
@@ -258,7 +256,7 @@ Attributes:
 - ```last_name``` the player's last name
 - ```position``` the player's position
 - ```birth_date``` the player's birth date
-- ```death_date``` the date of the player's death (Optional)
+- ```death_date``` the date of the player's death
 - ```throws``` the hand the player throws with
 - ```bats``` the side the player bats from
 - ```height``` the player's height
@@ -280,7 +278,7 @@ Endpoints
 
 Example request:
 
-	http://localhost:8000/api/team/3
+	https://2wf0rg.deta.dev/api/team/3
 
 Example response:
 
@@ -320,7 +318,7 @@ Endpoints
 
 Example request:
 
-	http://localhost:8000/api/categories/
+	https://2wf0rg.deta.dev/api/categories/
 
 Example response:
 

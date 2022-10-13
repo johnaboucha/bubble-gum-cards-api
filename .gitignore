@@ -160,3 +160,7 @@ cython_debug/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Deta generated files #
+######################
+.deta/
