@@ -6,4 +6,4 @@ router = APIRouter(prefix="/api/categories")
 
 @router.get("/")
 def read_root(skip: int = 0, top: int = 9, search: str = None):
-	return {"categories": categories[skip:skip+top]}
+	return {"categories": categories}
