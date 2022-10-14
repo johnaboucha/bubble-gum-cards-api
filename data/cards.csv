@@ -155,17 +155,17 @@ year,manufacturer,player,series,card_number,description,category,parallel,image
 1994,Upper Deck,Eddie Pearson,Top Prospects,128,,Telephone,,1994-upper-deck-eddie-pearson.jpg
 1999,Upper Deck,Mike Cameron,,64,,Telephone,,1999-upper-deck-mike-cameron.jpg
 1994,Upper Deck,Kent Hrbek,,98,,Telephone,,1994-upper-deck-kent-hrbek.jpg
-1983,Topps,Vern Ruhle,,172,,Pitching Arms,,1983-topps-vern-ruhle.jpg
-1982,Topps,Vern Ruhle,,539,,Pitching Arms,,1982-topps-vern-ruhle.jpg
-1991,Topps,Eric Plunk,,786,,Pitching Arms,,1991-topps-eric-plunk.jpg
-1984,Topps,Danny Darwin,,377,,Pitching Arms,,1984-topps-danny-darwin.jpg
-1985,Topps,Steve Farr,,664,,Pitching Arms,,1985-topps-steve-farr.jpg
-1989,Topps,Todd Burns,,174,,Pitching Arms,,1989-topps-todd-burns.jpg
-1985,Topps,Mike Moore,,279,,Pitching Arms,,1985-topps-mike-moore.jpg
-1983,Topps,Mike Caldwell,,142,,Pitching Arms,,1983-topps-mike-caldwell.jpg
-1983,Topps,John Denny,,211,,Pitching Arms,,1983-topps-john-denny.jpg
-1979,Topps,Hal Dues,,699,,Pitching Arms,,1979-topps-hal-dues.jpg
-1977,Topps,Dan Warthen,,391,,Pitching Arms,,1977-topps-dan-warthen.jpg
+1983,Topps,Vern Ruhle,,172,,Elbows Up,,1983-topps-vern-ruhle.jpg
+1982,Topps,Vern Ruhle,,539,,Elbows Up,,1982-topps-vern-ruhle.jpg
+1991,Topps,Eric Plunk,,786,,Elbows Up,,1991-topps-eric-plunk.jpg
+1984,Topps,Danny Darwin,,377,,Elbows Up,,1984-topps-danny-darwin.jpg
+1985,Topps,Steve Farr,,664,,Elbows Up,,1985-topps-steve-farr.jpg
+1989,Topps,Todd Burns,,174,,Elbows Up,,1989-topps-todd-burns.jpg
+1985,Topps,Mike Moore,,279,,Elbows Up,,1985-topps-mike-moore.jpg
+1983,Topps,Mike Caldwell,,142,,Elbows Up,,1983-topps-mike-caldwell.jpg
+1983,Topps,John Denny,,211,,Elbows Up,,1983-topps-john-denny.jpg
+1979,Topps,Hal Dues,,699,,Elbows Up,,1979-topps-hal-dues.jpg
+1977,Topps,Dan Warthen,,391,,Elbows Up,,1977-topps-dan-warthen.jpg
 1993,Fleer,Don Slaught,Ultra,455,,Catcher Yelling,,1993-fleer-don-slaught.jpg
 1995,Upper Deck,Brian Harper,,181,,Catcher Yelling,,1995-upper-deck-brian-harper.jpg
 1984,Fleer,Rich Gedman,,398,,Catcher Yelling,,1984-fleer-rich-gedman.jpg
@@ -215,14 +215,13 @@ year,manufacturer,player,series,card_number,description,category,parallel,image
 1997,Fleer,Scott Brosius,Ultra,361,,Fly Ball,,1997-fleer-scott-brosius.jpg
 1996,Donruss,Scott Bullett,,331,,Fly Ball,,1996-donruss-scott-bullett.jpg
 1992,Leaf,Dave Henderson,Series 1,232,,Fly Ball,,1992-leaf-dave-henderson.jpg
-1991,Topps,Tom Brookens,,268,,Bunting,,1991-topps-tom-brookens.jpg
-1983,Topps,Mick Kelleher,,79,,Bunting,,1983-topps-mick-kelleher.jpg
-1990,Donruss,Willie Wilson,,440,,Bunting,,1990-donruss-willie-wilson.jpg
-1984,Topps,Ron Washington,,623,,Bunting,,1984-topps-ron-washington.jpg
-1986,Donruss,Chili Davis,,65,,Bunting,,1986-donruss-chili-davis.jpg
-1989,Donruss,Bo Jackson,,208,,Bunting,,1989-donruss-bo-jackson.jpg
-1983,Topps,Glenn Hubbard,,624,,Bunting,,1983-topps-glenn-hubbard.jpg
-1983,Fleer,Glenn Hubbard,,139,,Bunting,,1983-fleer-glenn-hubbard.jpg
+1991,Topps,Tom Brookens,,268,,First Time at Bat,,1991-topps-tom-brookens.jpg
+1983,Topps,Mick Kelleher,,79,,First Time at Bat,,1983-topps-mick-kelleher.jpg
+1990,Donruss,Willie Wilson,,440,,First Time at Bat,,1990-donruss-willie-wilson.jpg
+1984,Topps,Ron Washington,,623,,First Time at Bat,,1984-topps-ron-washington.jpg
+1986,Donruss,Chili Davis,,65,,First Time at Bat,,1986-donruss-chili-davis.jpg
+1989,Donruss,Bo Jackson,,208,,First Time at Bat,,1989-donruss-bo-jackson.jpg
+1983,Topps,Glenn Hubbard,,624,,First Time at Bat,,1983-topps-glenn-hubbard.jpg
 2000,Upper Deck,Will Clark,Victory,197,,Crotch Bat,,2000-upper-deck-will-clark.jpg
 1993,Upper Deck,Chris Gwynn,,632,,Crotch Bat,,1993-upper-deck-chris-gwynn.jpg
 1992,Leaf,Robin Yount,Donruss Triple Play,81,,Crotch Bat,,1992-donruss-robin-yount.jpg
@@ -235,12 +234,12 @@ year,manufacturer,player,series,card_number,description,category,parallel,image
 1958,Topps,Frank Zupo,,229,,Unibrow,,1958-topps-frank-zupo.jpg
 2001,Upper Deck,Jack Clark,UD Decade,71,,Unibrow,,2001-upper-deck-jack-clark.jpg
 1988,Donruss,Sammy Stewart,,596,,Unibrow,,1988-donruss-sammy-stewart.jpg
-1991,Score,Dave Anderson,,641,,Strike!,,1991-score-dave-anderson.jpg
-1991,Fleer,Bill Pecota,,565,,Strike!,,1991-fleer-bill-pecota.jpg
-1992,Fleer,Andy Stankiewicz,Ultra,415,,Strike!,,1992-fleer-andy-stankiewicz.jpg
-1991,Fleer,Chris Sabo,,80,,Strike!,,1991-fleer-chris-sabo.jpg
-1989,Score,Jim Eisenreich,,594,,Strike!,,1989-score-jim-eisenreich.jpg
-1991,Score,Dave Bergman,,562,,Strike!,,1991-score-dave-bergman.jpg
+1991,Score,Dave Anderson,,641,,Strieeeek!,,1991-score-dave-anderson.jpg
+1991,Fleer,Bill Pecota,,565,,Strieeeek!,,1991-fleer-bill-pecota.jpg
+1992,Fleer,Andy Stankiewicz,Ultra,415,,Strieeeek!,,1992-fleer-andy-stankiewicz.jpg
+1991,Fleer,Chris Sabo,,80,,Strieeeek!,,1991-fleer-chris-sabo.jpg
+1989,Score,Jim Eisenreich,,594,,Strieeeek!,,1989-score-jim-eisenreich.jpg
+1991,Score,Dave Bergman,,562,,Strieeeek!,,1991-score-dave-bergman.jpg
 1992,Fleer,Phil Plantier,Rookie Sensations,19,,Squat,,1992-fleer-phil-plantier.jpg
 1992,Donruss,Phil Plantier,,488,,Squat,,1992-donruss-phil-plantier.jpg
 1992,Leaf,Alan Tremmell,Studio,179,,Bat Chin,,1992-leaf-alan-trammell.jpg
@@ -254,6 +253,12 @@ year,manufacturer,player,series,card_number,description,category,parallel,image
 1997,Upper Deck,Marvin Benard,,217,,Tagged Out,,1997-upper-deck-marvin-benard.jpg
 2002,Topps,Steve Cox,,592,,Hit By Pitch,,2002-topps-steve-cox.jpg
 1996,Upper Deck,Randy Johnson,,123,,Priceless,,1995-upper-deck-randy-johnson.jpg
-1986,Topps,Dick Schofield,,311,,Bunting,,1986-topps-dick-schofield.jpg
+1986,Topps,Dick Schofield,,311,,First Time at Bat,,1986-topps-dick-schofield.jpg
 1993,Score,Jacob Brumfield,,292,,Hit By Pitch,,1993-score-jacob-brumfield.jpg
 1995,Upper Deck,Chuck Carr,,299,,Tagged Out,,1995-upper-deck-chuck-carr.jpg
+1993,Leaf,Greg Harris,,157,,Glove Head,,1993-leaf-greg-harris.jpg
+1993,Leaf,Norm Charlton,,163,,First Time at Bat,,1993-fleer-norm-charlton.jpg
+1982,Topps,Rusty Kuntz,,237,,Weird Name,,1982-topps-rusty-kuntz.jpg
+1996,Bob,Hamelin,,289,,Cue Card,,1996-pinnacle-bob-hamelin.jpg
+1996,Score,Steve Finley,,287,,Cue Card,,1996-score-steve-finley.jpg
+1996,Score,Bobby Higginson,,278,,Cue Card,,1996-score-bobby-higginson.jpg

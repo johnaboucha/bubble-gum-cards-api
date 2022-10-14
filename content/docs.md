@@ -11,7 +11,7 @@ Let's make your first request to the Bubble Gum Cards API.
 Open up Terminal, Postman, or another tool to make a request for a resource. In the example below, a request is made to the baseball card with an ID equal to 1.
 
 
-	https://2wf0rg.deta.dev/api/cards/1
+	https://bubble-gum-cards-api.deta.dev/api/cards/1
 
 
 Here is the response.
@@ -35,7 +35,7 @@ Here is the response.
 
 The Base URL is the root URL that all requests will begin. The documentation assumes you are appending all endpoints to the Base URL to make requests.
 
-	https://2wf0rg.deta.dev/api/
+	https://bubble-gum-cards-api.deta.dev/api/
 
 <h3 id="authentication">Authentication</h3>
 
@@ -47,7 +47,7 @@ The API includes ```skip``` and ```top``` options when querying a resource. Skip
 
 As an example, the following request will return 5 cards starting from the 10th card.
 
-	https://2wf0rg.deta.dev/api/cards/?skip=9&top=5
+	https://bubble-gum-cards-api.deta.dev/api/cards/?skip=9&top=5
 
 <h3 id="search">Search</h3>
 
@@ -55,7 +55,7 @@ All resources support a search parameter that filters the results returned. Sear
 
 An example of a search query is shown below.
 
-	https://2wf0rg.deta.dev/api/cards/?search=steve
+	https://bubble-gum-cards-api.deta.dev/api/cards/?search=steve
 
 <h2 id="resources">Resources</h2>
 
@@ -65,7 +65,7 @@ The Root resource path returns available resources within the API.
 
 Example request:
 
-	https://2wf0rg.deta.dev/api/
+	https://bubble-gum-cards-api.deta.dev/api/
 
 Example response:
 
@@ -98,7 +98,7 @@ Endpoints
 
 Example request:
 
-	https://2wf0rg.deta.dev/api/cards/2
+	https://bubble-gum-cards-api.deta.dev/api/cards/2
 
 Example response:
 
@@ -140,7 +140,7 @@ Query parameters:
 
 An example query using the category parameter is shown below:
 
-	https://2wf0rg.deta.dev/api/cards/?category=telephone
+	https://bubble-gum-cards-api.deta.dev/api/cards/?category=telephone
 
 Example response:
 
@@ -185,7 +185,7 @@ Endpoints
 
 Example request:
 
-	https://2wf0rg.deta.dev/api/manufacturers/1
+	https://bubble-gum-cards-api.deta.dev/api/manufacturers/1
 
 Example response:
 
@@ -231,7 +231,7 @@ Endpoints
 
 Example request:
 
-	https://2wf0rg.deta.dev/api/player/3
+	https://bubble-gum-cards-api.deta.dev/api/player/3
 
 Example response:
 
@@ -278,7 +278,7 @@ Endpoints
 
 Example request:
 
-	https://2wf0rg.deta.dev/api/team/3
+	https://bubble-gum-cards-api.deta.dev/api/team/3
 
 Example response:
 
@@ -318,7 +318,7 @@ Endpoints
 
 Example request:
 
-	https://2wf0rg.deta.dev/api/categories/
+	https://bubble-gum-cards-api.deta.dev/api/categories/
 
 Example response:
 
