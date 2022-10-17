@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from data.data import cards
+from data.sheets import cards
 from security.keys import api_key_auth, keys
 
 router = APIRouter(prefix="/api/cards")
@@ -49,4 +49,8 @@ def create_card():
 
 @router.delete("/{id}", dependencies=[Depends(api_key_auth)])
 def delete_card(id: int):
+	pass
+
+@router.get("/sheets/")
+def read_root2():
 	pass
