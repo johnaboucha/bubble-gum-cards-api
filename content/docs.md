@@ -4,6 +4,8 @@
 
 The Bubble Gum Cards API provides access to a curated set of baseball cards. The collection is unique in that the individual cards have been categorized by the contents of their photograph. New cards are added periodically.
 
+A basic app using this API can be found at: [https://bubble-gum-cards.deta.dev](https://bubble-gum-cards.deta.dev)
+
 <h2 id="getting-started">Getting started</h2>
 
 Let's make your first request to the Bubble Gum Cards API.
