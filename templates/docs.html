@@ -5,6 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+		<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/papercolor-light.min.css" integrity="sha512-+QY7lqqRZmz/48bBGgpk0mHX8iKd6qVqjRsDkLhdvRj5pXf+GnJ1iOTPs3iysCRUn0poD0IMu8XRqYblXh+THQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="/static/main.css">
 		<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 		<title>Bubble Gum Cards</title>
@@ -21,7 +25,26 @@
 			</header>
 		<div class="content">
 			<aside>
-				<ul>
+				<div class="mobile">
+					<select id="menu-select" onchange="location = this.value;">
+						<option value="">Menu</option>
+						<option value="/#overview">Code Examples</option>
+						<option value="/#getting-started">Getting Started</option>
+							<option value="/#base">&nbsp;&nbsp;- Base URL</option>
+							<option value="/#authentication">&nbsp;&nbsp;- Authentication</option>
+							<option value="/#search">&nbsp;&nbsp;- Search</option>
+						<option value="/#resources">Resources</option>
+							<option value="/#root">&nbsp;&nbsp;- Root</option>
+							<option value="/#cards">&nbsp;&nbsp;- Cards</option>
+							<option value="/#manufacturers">&nbsp;&nbsp;- Manufacturers</option>
+							<option value="/#players">&nbsp;&nbsp;- Players</option>
+							<option value="/#teams">&nbsp;&nbsp;- Teams</option>
+							<option value="/#categories">&nbsp;&nbsp;- Categories</option>
+						<option value="/#code-examples">Code Examples</option>
+						
+					</select>
+				</div>
+				<ul class="desktop">
 					<li><a href="#overview">Overview</a></a></li>
 					<li><a href="#getting-started">Getting Started</a></a></li>
 					<ul>
@@ -38,13 +61,14 @@
 						<li><a href="#teams">Teams</a></a></li>
 						<li><a href="#categories">Categories</a></a></li>
 					</ul>
-						
+					<li><a href="#code-examples">Code Examples</a></li>
 				</ul>
 			</aside>
 			<div class="document">
 				{{content|safe}}
 			</div>
 		</div>			
-		</main>		
+		</main>
+		<script>hljs.highlightAll();</script>		
 	</body>
 </html>

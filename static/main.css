@@ -12,7 +12,8 @@ h1 {
 
 header h1,
 h2,
-h3 {
+h3,
+h4 {
 	margin-bottom: 5px;
 	margin-top: 0px;
 }
@@ -38,4 +39,44 @@ aside {
 .document {
 	grid-column-start: 2;
 	grid-column-end: 5;
+}
+
+.hljs {
+	background: none;
+}
+
+pre > code {
+	font-size: 16px;
+}
+
+
+.mobile {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+
+	aside {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+	.document {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+}
+
+@media (max-width: 576px) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-bottom: 40px;
+		text-align: center;
+	}
 }

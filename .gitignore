@@ -164,3 +164,4 @@ Thumbs.db
 # Deta generated files #
 ######################
 .deta/
+.space
