@@ -195,3 +195,249 @@ Content-Type: application/json
 },
 ...]
 ```
+
+## Manufacturers
+
+A Manufacturer resource is a single card manufacturer found within the collection.
+
+Endpoints
+
+- ```/manufacturers/``` gets all the manufacturer resources
+- ```/manufacturers/:id/``` gets specific manufacturer by its ID
+
+Example request:
+
+```
+https://bgcardsapi-1-u6196911.deta.app/api/manufacturers/1
+```
+
+Example response:
+
+```
+HTTP/1.0 200 OK
+Content-Type: application/json
+{
+	"id": 1,
+	"name": "Topps",
+	"year_founded": "1938",
+	"year_defuct": "",
+	"fate": "",
+	"headquarters": "New York, NY",
+	"website": "https://www.topps.com/",
+	"revenue": "$560 million",
+	"employees": "422",
+	"address": "1 Whitehall Street New York, NY 10004"
+}
+```
+
+Attributes:
+
+- ```name``` the name of the manufacturer
+- ```year_founded``` the year the manufacturer was established
+- ```year_defunct``` the year the manufacturer went bankrupt or was sold
+- ```fate``` description of what happened after manufacturer went defunct
+- ```headquarters``` the location of the manufacturer's main office
+- ```website``` the manufacturer's website
+- ```revenue``` the manufacturer's actual or estimated revenue
+- ```employees``` the number of manufacturer's employees
+- ```address``` the street address of the manufacturer
+
+Searchable fields
+
+- ```name```
+
+## Players
+
+A Player resource is a single player found within the collection.
+
+Endpoints
+
+- ```/players/``` gets all the player resources
+- ```/players/:id/``` gets specific player by their ID
+
+Example request:
+
+```
+https://bgcardsapi-1-u6196911.deta.app/api/player/3
+```
+
+Example response:
+
+```
+HTTP/1.0 200 OK
+Content-Type: application/json
+{
+	"id": 3,
+	"first_name": "Barry",
+	"last_name": "Bonds",
+	"position": "Left Field",
+	"birth_date": "1964-07-24",
+	"death_date": "",
+	"throws": "left",
+	"bats": "left",
+	"height": "6' 1\"",
+	"weight": "185"
+}
+```
+
+Attributes:
+
+- ```first_name``` the player's first name
+- ```last_name``` the player's last name
+- ```position``` the player's position
+- ```birth_date``` the player's birth date
+- ```death_date``` the date of the player's death
+- ```throws``` the hand the player throws with
+- ```bats``` the side the player bats from
+- ```height``` the player's height
+- ```weight``` the player's weight
+
+Searchable fields:
+
+- ```first_name```
+- ```last_name```
+
+## Teams
+
+A Team resource is a single team found within the collection.
+
+Endpoints
+
+- ```/teams/``` gets all the team resources
+- ```/teams/:id/``` gets specific team by its ID
+
+Example request:
+
+```
+https://bgcardsapi-1-u6196911.deta.app/api/team/3
+```
+
+Example response:
+
+```
+HTTP/1.0 200 OK
+Content-Type: application/json
+{
+	"id": 3,
+	"location": "Montreal",
+	"name": "Expos",
+	"league": "National League",
+	"league_level": "major",
+	"year_established": "1969",
+	"year_defunct": "2004"
+}
+```
+
+Attributes:
+
+- ```location``` the team's location
+- ```name``` the team's name
+- ```league``` the league that the team is a member of
+- ```league_level``` the league level the team participates in
+- ```year_established``` the year the team was formed
+- ```year_defunct``` the year the team was sold or disbanded
+
+Searchable fields:
+
+- ```location```
+- ```name```
+
+## Categories
+
+The Category resource returns all the categories found within the collection.
+
+Endpoints
+
+- ```/categories/``` gets all the categories resources
+
+Example request:
+
+```
+https://bgcardsapi-1-u6196911.deta.app/api/categories/
+```
+
+Example response:
+
+```
+HTTP/1.0 200 OK
+Content-Type: application/json
+{
+	"categories": [
+		"Alliteration",
+		"Bubble Gum",
+		"Camera",
+		"Celebrity",
+		"Crotch Bat",
+		"Fly Ball",
+		"Flying Helmet",
+		"Priceless",
+		"Tagged Out",
+		"Telephone"
+	]
+}
+```
+
+## Example Code
+
+### Python
+
+Use the ```requests``` library in Python to make GET requests.
+
+```
+from requests import get
+
+response = get('https://bgcardsapi-1-u6196911.deta.app/api/cards/')
+
+cards = list(response.json())
+
+for card in cards:
+	print(card['year'], card['manufacturer'], card['player'])
+```
+
+### Go
+
+Use the ```net/http``` package in Go's standard library to make GET requests.
+
+```
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+)
+
+type Card struct {
+	CardID       int
+	Year         int
+	Manufacturer string
+	Player       string
+	Series       string
+	Card_number  string
+	Description  string
+	Category     string
+	Parallel     string
+	Image        string
+}
+
+func main() {
+	response, err := http.Get("https://bgcardsapi-1-u6196911.deta.app/api/cards/")
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	var cards []Card
+	json.Unmarshal(body, &cards)
+
+	for _, card := range cards {
+		fmt.Println(card.Year, card.Manufacturer, card.Player)
+	}
+}
+```
